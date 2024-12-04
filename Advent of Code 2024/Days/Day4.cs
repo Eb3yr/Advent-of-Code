@@ -80,7 +80,6 @@ namespace Advent_of_Code_2024.Days
 			Console.WriteLine($"Count: {count}");
 		}
 
-		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		private static bool IsMas(string[] strs)
 		{
 			string topLeft = new([strs[0][0], strs[1][1], strs[2][2]]);
@@ -96,15 +95,6 @@ namespace Advent_of_Code_2024.Days
 		private static bool OutOfBounds(int index, int min, int maxExcl)
 		{
 			return index < min || index > maxExcl - 1;
-		}
-
-		private static string Format(this string[] strs)
-		{
-			string o = "";
-			foreach (string str in strs)
-				o += (str + "\n");
-
-			return o;
 		}
 	}
 }
